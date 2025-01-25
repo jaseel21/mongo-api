@@ -9,7 +9,11 @@ const UserModel = require('./models/User')
 
 const app=express()
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin:["https://client-five-phi-82.vercel.app"],
+    methods:["GET","POST","PUT","DELETE"],
+    credentials:true
+}));
 
 
 
